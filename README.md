@@ -10,4 +10,4 @@ Start:
 - open http://127.0.0.1/
 
 Stop:
-- `docker-compose stop`
+- `docker-compose down`
