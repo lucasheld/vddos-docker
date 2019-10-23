@@ -1,0 +1,15 @@
+version: '3.1'
+
+services:
+  nginx:
+    image: nginx:1.17-alpine
+    restart: unless-stopped
+    expose:
+      - "80"
+  vddos:
+    build: .
+    restart: "no"
+    ports:
+      - "80:80"
+    depends_on:
+      - nginx
